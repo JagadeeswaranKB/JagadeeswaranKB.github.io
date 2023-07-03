@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagadeeswaran K B</title>
+    <link rel="shortcut icon" type="images/ico" href="Assets/img/favicon.ico"
+</head>
+
+<body style="background-color:#ffffff; align-items: center; justify-content: center;">
+   
+        <div class="container" onclick="fading(this)" id="container" style="padding: 20px; box-shadow: 0px 0px 10px 3px rgb(255, 255, 255) ; background-color: #a71f1f; align-items: center; justify-content: center; width: 86%; height: 26%; border-radius: 20px; position: absolute; left: 5%; top: 5%;">
+<h1 style="background-color: rgb(173, 41, 29); color: rgb(236, 236, 236); padding: 25px; border-radius: 10px;  box-shadow: 1px 1px 5px 2px rgb(255, 255, 255); font-size: 20px;">
+    Thanks for your message ❤</h1>
+<p style="color: rgb(255, 255, 255);">Your message is submitted  </p>
+<button onclick="action(this)" style="border-radius: 10px; background-color:#760802; color: #ffffff; padding: 10px;">
+ Done
+</button>   
+</div>  
+
+<script>
+    function action(x) {
+        x.style.width="120px";
+        x.style.opacity = "0";
+    }
+    
+    function fading(y) {
+        y.style.width = "200px";
+        y.style.opacity = "0";
+        y.style.transition = '.2s';
+        
+    }
+</script>
+</body>
+</html>
