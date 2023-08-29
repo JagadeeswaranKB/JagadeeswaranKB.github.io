@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagadeeswaran K B</title>
+
+    <link rel="stylesheet" href="Assets/css/styles.css">
+
+    <!--ajax scroll api-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="shortcut icon" type="images/ico" href="Assets/img/favicon.ico"
+    
+    
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Jagadeeswaran K B</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Return Home</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--====== CERTIFICATIONS =====-->
+    
+    <a href="" class="work__img">
+        <br>
+        <br>
+        <br>
+   <center> <img class="1_cer" src="Assets/img/certifications/Jagadeeswaran K B GreatLearning.png" alt="1cer" width="70%" height="70%"> </center>
+   <br>
+   <center> <img class="3_cer" src="Assets/img/certifications/Jagadeeswaran K B GOOGLE.png" alt="2cer" width="70%" height="70%"> </center>
+   <br>
+   <center> <img class="4_cer" src="Assets/img/certifications/Jagadeeswaran K B TCS.png" alt="3cer" width="70%" height="70%"> </center>
+   <br>
+   <center> <img class="5_cer" src="Assets/img/certifications/JagadeeswaranK B-Get Connected.png" alt="4cer" width="70%" height="70%"> </center>
+   <br>
+   <center> <img class="6_cer" src="Assets/img/certifications/jagadeeswaran Coursera.png" alt="5cer" width="70%" height="70%"> </center>
+   <br>
+   <center> <img class="7_cer" src="Assets/img/certifications/Jagadeeswaran K B Let_s Upgrade HTML CSS.png" alt="6cer" width="70%" height="70%"> </center>
+   <br>
+   <center> <img class="8_cer" src="Assets/img/certifications/Jagadeeswaran K B Alison_Certificate.png" alt="7cer" width="70%" height="70%"> </center>
+   <br>
+   <center> <img class="9_cer" src="Assets/img/certifications/Jagadeeswaran K B Jobaaj Workshop.jpg" alt="8cer" width="70%" height="70%"> </center>
+   <br>
+   <center> <img class="9_cer" src="Assets/img/certifications/Tedora Techno Labs.png" alt="8cer" width="70%" height="70%"> </center>
+</a>
+       
+        
+        
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="Assets/js/main.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+        </script>
+</body>
+
+</html>
