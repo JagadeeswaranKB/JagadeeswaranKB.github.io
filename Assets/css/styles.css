@@ -396,6 +396,7 @@ img {
   border: 1.5px solid var(--second-color);
   outline: none;
   margin-bottom: var(--mb-4);
+  font-family:var(--body-font);
 }
 
 .contact__button {
