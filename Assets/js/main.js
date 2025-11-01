@@ -53,3 +53,23 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 400 });
 sr.reveal('.home__social-icon', { interval: 200 });
 sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 }); 
+
+/*===== CONTACT FORM reCAPTCHA VALIDATION =====*/
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      const recaptchaResponse = grecaptcha.getResponse();
+
+      if (recaptchaResponse.length === 0) {
+        event.preventDefault(); // Stop form submission
+        alert("⚠️ Please verify that you are not a robot before submitting.");
+      } else {
+        // Optional: Reset form after short delay
+        setTimeout(() => form.reset(), 1000);
+      }
+    });
+  }
+});
+
