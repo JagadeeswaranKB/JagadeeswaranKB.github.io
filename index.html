@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="shortcut icon" type="images/ico" href="Assets/img/favicon.ico">
+    
     <!--===recaptcha===-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -180,23 +181,31 @@
         </section>
 
         <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
+        <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+      <h2 class="section-title">Contact</h2>
 
-            <div class="contact__container bd-grid">
-                <form onsubmit=sendEmail(); reset(); return false; action="https://formsubmit.co/723d5db63ab9352dceda757dbdb86ffe" method="POST" class="contact__form">
-                    <input type="text" name="name" placeholder="Name" class="contact__input" id="Name" required>
-                    <input type="email" name="mail" placeholder="Email" class="contact__input" id="Email" required>
-                    <textarea cols="0" name="message" placeholder="Type your message here..." rows="10" class="contact__input" id="Message" ></textarea>
-                    <div class="g-recaptcha" data-sitekey="6LfbPP4rAAAAALdCf5U1wiKi2CvtoIEYePJWj_oC"></div>
-                    <input type="submit" value="Send" class="contact__button button" action="https://formsubmit.co/723d5db63ab9352dceda757dbdb86ffe">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="New submission!">
-                    <input type="hidden" name="_next" value="https://JagadeeswaranKB.github.io/thanks">
-                </form>
-            </div>
-        </section>
+      <div class="contact__container bd-grid">
+        <form id="contactForm" action="https://formsubmit.co/723d5db63ab9352dceda757dbdb86ffe" method="POST" class="contact__form">
+          <input type="text" name="name" placeholder="Name" class="contact__input" id="Name" required>
+          <input type="email" name="mail" placeholder="Email" class="contact__input" id="Email" required>
+          <textarea cols="0" name="message" placeholder="Type your message here..." rows="10" class="contact__input" id="Message" required></textarea>
+
+      <!-- Google reCAPTCHA -->
+          <div class="g-recaptcha" data-sitekey="6LfbPP4rAAAAALdCf5U1wiKi2CvtoIEYePJWj_oC"></div>
+
+      <!-- Submit button -->
+          <input type="submit" value="Send" class="contact__button button">
+
+      <!-- Hidden FormSubmit fields -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New submission!">
+          <input type="hidden" name="_next" value="https://JagadeeswaranKB.github.io/thanks">
+        </form>
+      </div>
+    </section>
     </main>
+
 
     <!--===== FOOTER =====-->
     <footer class="footer">
