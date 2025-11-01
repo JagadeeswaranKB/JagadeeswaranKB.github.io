@@ -63,35 +63,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailError = document.getElementById("emailError");
 
     form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Stop default submission first
+
       const recaptchaResponse = grecaptcha.getResponse();
       const emailValue = emailField.value.trim();
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      let hasError = false;
+      // Reset error display
       emailError.style.display = "none";
       emailError.textContent = "";
 
-      // reCAPTCHA validation
+      // Check reCAPTCHA
       if (recaptchaResponse.length === 0) {
-        event.preventDefault();
         alert("⚠️ Please verify that you are not a robot before submitting.");
-        hasError = true;
+        return;
       }
 
-      // Email validation
+      // Check email validity
       if (!emailPattern.test(emailValue)) {
-        event.preventDefault();
         emailError.textContent = "❌ Please enter a valid email address.";
         emailError.style.display = "block";
         emailField.focus();
-        hasError = true;
+        return;
       }
 
-      // Reset form if no error
-      if (!hasError) {
-        setTimeout(() => form.reset(), 1000);
-      }
+      // If everything is fine, submit form manually
+      form.submit();
     });
   }
 });
+
 
