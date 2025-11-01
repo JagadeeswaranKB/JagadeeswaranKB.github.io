@@ -189,6 +189,7 @@
         <form id="contactForm" action="https://formsubmit.co/723d5db63ab9352dceda757dbdb86ffe" method="POST" class="contact__form">
           <input type="text" name="name" placeholder="Name" class="contact__input" id="Name" required>
           <input type="email" name="email" id="Email" placeholder="Email" class="contact__input" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address (e.g. name@example.com)">
+           <span id="emailError" class="error-message" style="color: red; font-size: 14px; display: none; margin-top: 5px;"></span>
           <textarea cols="0" name="message" placeholder="Type your message here..." rows="10" class="contact__input" id="Message" required></textarea>
 
       <!-- Google reCAPTCHA -->
