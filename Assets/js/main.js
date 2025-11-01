@@ -73,3 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Email validation before sending form
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#contact-form");
+  const emailInput = document.querySelector("#email");
+
+  if (form && emailInput) {
+    form.addEventListener("submit", (e) => {
+      const emailValue = emailInput.value.trim();
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+      if (!emailPattern.test(emailValue)) {
+        e.preventDefault(); // Stop form submission
+        alert("Please enter a valid email address.");
+        emailInput.focus();
+      }
+    });
+  }
+});
