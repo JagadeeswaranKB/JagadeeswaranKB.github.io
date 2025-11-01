@@ -54,40 +54,44 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 4
 sr.reveal('.home__social-icon', { interval: 200 });
 sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 }); 
 
-/*===== CONTACT FORM reCAPTCHA VALIDATION =====*/
+/*===== CONTACT FORM reCAPTCHA AND EMAIL VALIDATION =====*/
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
 
   if (form) {
+    const emailField = form.querySelector('input[name="email"]');
+    const emailError = document.getElementById("emailError");
+
     form.addEventListener("submit", function (event) {
       const recaptchaResponse = grecaptcha.getResponse();
+      const emailValue = emailField.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+      let hasError = false;
+      emailError.style.display = "none";
+      emailError.textContent = "";
+
+      // reCAPTCHA validation
       if (recaptchaResponse.length === 0) {
-        event.preventDefault(); // Stop form submission
+        event.preventDefault();
         alert("⚠️ Please verify that you are not a robot before submitting.");
-      } else {
-        // Optional: Reset form after short delay
+        hasError = true;
+      }
+
+      // Email validation
+      if (!emailPattern.test(emailValue)) {
+        event.preventDefault();
+        emailError.textContent = "❌ Please enter a valid email address.";
+        emailError.style.display = "block";
+        emailField.focus();
+        hasError = true;
+      }
+
+      // Reset form if no error
+      if (!hasError) {
         setTimeout(() => form.reset(), 1000);
       }
     });
   }
 });
 
-// Email validation before sending form
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("#contact-form");
-  const emailInput = document.querySelector("#email");
-
-  if (form && emailInput) {
-    form.addEventListener("submit", (e) => {
-      const emailValue = emailInput.value.trim();
-      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-
-      if (!emailPattern.test(emailValue)) {
-        e.preventDefault(); // Stop form submission
-        alert("Please enter a valid email address.");
-        emailInput.focus();
-      }
-    });
-  }
-});
