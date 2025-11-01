@@ -408,6 +408,18 @@ img {
   margin-left: auto;
 }
 
+/* Add space between reCAPTCHA and the Send button */
+.g-recaptcha {
+  margin-bottom: 1rem;  /* or try 20px if you want a little more */
+  display: block;
+}
+
+.contact__button {
+  margin-top: 0.5rem;
+  display: block;
+  width: fit-content; /* or 100% if you want full-width button */
+}
+
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
