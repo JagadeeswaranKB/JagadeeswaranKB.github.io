@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="shortcut icon" type="images/ico" href="Assets/img/favicon.ico">
+    <!--===recaptcha===-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!--===SEO===-->
     <meta name="description" content="It's my portfolio, I love to design and build websites, I'm a learner and learning React-js and Java, Inspired to build more websites. I'm a video editor and figma designer also. Try contact me for more."
@@ -186,6 +188,7 @@
                     <input type="text" name="name" placeholder="Name" class="contact__input" id="Name" required>
                     <input type="email" name="mail" placeholder="Email" class="contact__input" id="Email" required>
                     <textarea cols="0" name="message" placeholder="Type your message here..." rows="10" class="contact__input" id="Message" ></textarea>
+                    <div class="g-recaptcha" data-sitekey="6LfbPP4rAAAAALdCf5U1wiKi2CvtoIEYePJWj_oC"></div>
                     <input type="submit" value="Send" class="contact__button button" action="https://formsubmit.co/723d5db63ab9352dceda757dbdb86ffe">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="New submission!">
