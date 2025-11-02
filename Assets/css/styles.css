@@ -593,7 +593,7 @@ img {
   }
  .home__img {
   position: absolute;
-  right: 5%;
+  right: 10%;
   bottom: 18%;
   width: 360px;
   max-width: 90%;
