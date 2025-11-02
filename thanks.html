@@ -11,13 +11,14 @@
     body {
       background-color: #ffffff;
       display: flex;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
       margin: 0;
+      padding: 0;
+      min-height: 100vh;
     }
 
     .container {
+      margin-top: 40px; /* 👈 Keeps box near top */
       padding: 20px;
       box-shadow: 0px 0px 10px 3px rgb(255, 255, 255);
       background-color: #a71f1f;
@@ -25,7 +26,13 @@
       width: 86%;
       max-width: 400px;
       text-align: center;
-      transition: 0.3s ease;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    /* ✨ Fade + Slide Up Animation */
+    .fade-out {
+      opacity: 0;
+      transform: translateY(-30px);
     }
 
     h1 {
@@ -55,13 +62,15 @@
 
     button:hover {
       background-color: #8c0d05;
+      transform: scale(1.05);
     }
 
-    /* Mobile Responsive */
+    /* ✅ Mobile Responsive Fix */
     @media screen and (max-width: 480px) {
       .container {
         width: 90%;
         padding: 15px;
+        margin-top: 20px;
       }
 
       h1 {
@@ -82,19 +91,26 @@
 </head>
 
 <body>
-  <div class="container" onclick="fading(this)" id="container">
+  <div class="container" id="container">
     <h1>Thanks for your message ❤</h1>
     <p>Your message is submitted</p>
-    <button onclick="myFunction()">Done</button>   
+    <button onclick="redirectNow()">Done</button>   
   </div>  
 
   <script>
-    function fading(y) {
-      y.style.opacity = "0";
-      y.style.transition = '.2s';
-    }
+    // ✅ Fade + Slide up after 2 seconds
+    setTimeout(() => {
+      const box = document.getElementById("container");
+      box.classList.add("fade-out");
+    }, 2000);
 
-    function myFunction() {
+    // ✅ Redirect after 2.5 seconds
+    setTimeout(() => {
+      location.replace("https://jagadeeswarankb.github.io/");
+    }, 2500);
+
+    // ✅ Manual redirect on button click
+    function redirectNow() {
       location.replace("https://jagadeeswarankb.github.io/");
     }
   </script>
