@@ -112,8 +112,15 @@
     function redirectNow() {
       location.replace("https://jagadeeswarankb.github.io/");
     }
+    
+    // Check if user came from your website's contact page
+  if (document.referrer.indexOf('jagadeeswarankb.github.io') === -1) {
+    // If not, redirect them to homepage
+    window.location.href = "https://jagadeeswarankb.github.io";
+  }
   </script>
 </body>
 </html>
+
 
 
