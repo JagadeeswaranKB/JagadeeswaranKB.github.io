@@ -591,11 +591,14 @@ img {
   .home {
     padding: 8rem 0 2rem;
   }
-  .home__img {
-  width: 350px;
-  bottom: 15%;
+ .home__img {
+  position: absolute;
   right: 5%;
+  bottom: 18%;
+  width: 360px;
+  max-width: 90%;
   border-radius: 25px;
+  transition: transform 0.4s ease;
 }
   .about__container {
     padding-top: 2rem;
