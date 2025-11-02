@@ -94,6 +94,8 @@
   <div class="container" id="container">
     <h1>Thanks for your message ❤</h1>
     <p>Your message is submitted</p>
+    <p style="color: #fff; font-size: 13px; margin-top: 10px; opacity: 0.9;">
+    If the redirection doesn’t happen automatically, please click the “Done” button.</p>
     <button onclick="redirectNow()">Done</button>
   </div>
 
@@ -102,12 +104,12 @@
     setTimeout(() => {
       const box = document.getElementById("container");
       box.classList.add("fade-out");
-    }, 2000);
+    }, 5000);
 
     // Redirect
     setTimeout(() => {
       location.replace("https://jagadeeswarankb.github.io/");
-    }, 2500);
+    }, 5500);
 
     function redirectNow() {
       location.replace("https://jagadeeswarankb.github.io/");
@@ -115,3 +117,4 @@
   </script>
 </body>
 </html>
+
