@@ -592,9 +592,11 @@ img {
     padding: 8rem 0 2rem;
   }
   .home__img {
-    width: 400px;
-    bottom: 10%;
-  }
+  width: 350px;
+  bottom: 15%;
+  right: 5%;
+  border-radius: 25px;
+}
   .about__container {
     padding-top: 2rem;
   }
