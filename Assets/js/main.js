@@ -93,4 +93,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+/*===== WORK SECTION LINK BEHAVIOR =====*/
+document.addEventListener("DOMContentLoaded", function() {
+    const workLinks = document.querySelectorAll('.work__img');
 
+    workLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth >= 768) {
+                // Desktop: open in new tab only
+                e.preventDefault(); // Prevent default same-tab navigation
+                window.open(link.href, '_blank'); 
+            } else {
+                // Mobile: do nothing
+                e.preventDefault();
+            }
+        });
+    });
+});
