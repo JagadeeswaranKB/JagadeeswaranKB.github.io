@@ -336,10 +336,12 @@ img {
 
 .skills__subtitle {
   margin-bottom: var(--mb-2);
+  text-align: center;
 }
 
 .skills__text {
   margin-bottom: var(--mb-4);
+  text-align: center;
 }
 
 .skills__data {
@@ -375,6 +377,30 @@ img {
   z-index: var(--z-back);
 }
 
+.skills__onpage {
+  width: 95%;
+}
+
+.skills__offpage {
+  width: 90%;
+}
+
+.skills__technicalseo {
+  width: 85%;
+}
+
+.skills__keywordresearch {
+  width: 80%;
+}
+
+.skills__seoaudit {
+  width: 70%;
+}
+
+.skills__gsc {
+  width: 75%;
+}
+
 .skills__html {
   width: 95%;
 }
@@ -383,16 +409,21 @@ img {
   width: 85%;
 }
 
-.skills__js {
-  width: 50%;
-}
-
-.skills__java {
-  width: 40%;
-}
-
 .skills__img {
   border-radius: .5rem;
+}
+
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Mobile Responsive: Stack into 1 column below 768px */
+@media screen and (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== WORK =====*/
